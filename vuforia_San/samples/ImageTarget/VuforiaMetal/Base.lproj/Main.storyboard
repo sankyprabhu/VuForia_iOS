@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="PW4-nf-XJ6">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Image Targets Metal-->
+        <scene sceneID="MCG-K3-xGE">
+            <objects>
+                <viewController title="Image Targets Metal" id="lUR-3L-Cca" customClass="SampleAppAboutViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eC2-86-aAi"/>
+                        <viewControllerLayoutGuide type="bottom" id="mU0-j0-Nx6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RLb-Fp-zAT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tYp-Ft-e08">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tYp-Ft-e08" firstAttribute="top" secondItem="RLb-Fp-zAT" secondAttribute="top" id="47a-su-2hI"/>
+                            <constraint firstItem="tYp-Ft-e08" firstAttribute="leading" secondItem="RLb-Fp-zAT" secondAttribute="leading" id="6v9-Fb-Kf9"/>
+                            <constraint firstAttribute="trailing" secondItem="tYp-Ft-e08" secondAttribute="trailing" id="lz3-K5-i3Q"/>
+                            <constraint firstItem="tYp-Ft-e08" firstAttribute="bottom" secondItem="mU0-j0-Nx6" secondAttribute="top" id="mXf-Lx-axQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Image Targets Metal" id="hMZ-fy-JsH">
+                        <barButtonItem key="rightBarButtonItem" id="Um4-88-qjK">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="IrQ-DU-rG4">
+                                <rect key="frame" x="233" y="7" width="71" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onStartButton:" destination="lUR-3L-Cca" eventType="touchUpInside" id="shC-Ca-3TJ"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="uiWebView" destination="tYp-Ft-e08" id="JRQ-5R-oqG"/>
+                        <segue destination="8P1-a9-sRu" kind="push" identifier="PushImageTargets" id="Pip-4Q-qTm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JTa-iB-UDX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-284" y="158"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mqy-CD-SHA">
+            <objects>
+                <navigationController id="PW4-nf-XJ6" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Emm-iA-ZFU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="lUR-3L-Cca" kind="relationship" relationship="rootViewController" id="CzP-Jd-FWS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WRc-EO-0M1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1133" y="158"/>
+        </scene>
+        <!--Image Targets Metal-->
+        <scene sceneID="P2W-W4-uck">
+            <objects>
+                <viewController title="Image Targets Metal" id="8P1-a9-sRu" customClass="ImageTargetsMetalViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="F9P-J7-8yh"/>
+                        <viewControllerLayoutGuide type="bottom" id="Jj2-NK-bTm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Byi-i9-fKj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IT.png" translatesAutoresizingMaskIntoConstraints="NO" id="2qg-J3-qOc" userLabel="ARView Placeholder">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="CI8-gz-GwJ"/>
+                    <connections>
+                        <outlet property="ARViewPlaceholder" destination="2qg-J3-qOc" id="uSz-1c-iAr"/>
+                        <segue destination="uPG-JK-lOU" kind="custom" identifier="PresentMenu" customClass="PresentMenuSegue" id="BLU-uD-5ZV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kts-Wy-K0R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="106" y="914"/>
+        </scene>
+        <!--Standard Menu A-->
+        <scene sceneID="tve-45-xBo">
+            <objects>
+                <tableViewController title="Standard Menu A" id="uPG-JK-lOU" userLabel="Standard Menu A" customClass="SampleAppMenuViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="3br-aU-QUU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
+                        <sections>
+                            <tableViewSection headerTitle="Vuforia Sample" id="sgs-Eg-8Xz">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="S5X-9W-7wi">
+                                        <rect key="frame" x="0.0" y="50" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="S5X-9W-7wi" id="3Zz-3M-2fY">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="About" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v9v-Wg-At4">
+                                                    <rect key="frame" x="8" y="11" width="47" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="uPG-JK-lOU" id="ybs-5W-9Bx"/>
+                            <outlet property="delegate" destination="uPG-JK-lOU" id="Qfo-f2-Yih"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <segue destination="8P1-a9-sRu" kind="custom" identifier="BackToImageTargetsMetal" customClass="UnwindMenuSegue" id="0NZ-m8-BDY"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aJX-cN-mZ2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-284" y="1704"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="IT.png" width="523" height="874"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Pip-4Q-qTm"/>
+    </inferredMetricsTieBreakers>
+</document>
